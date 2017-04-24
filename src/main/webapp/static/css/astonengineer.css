@@ -1,0 +1,22 @@
+.hidden{
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+
+.blueBackground {
+    background-color: #305F96;
+}
+
+.text-white {
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #305F96;
+    color: #ffffff;
+}
