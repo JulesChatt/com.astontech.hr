@@ -35,6 +35,9 @@ public class SeedData implements ApplicationListener<ContextRefreshedEvent> {
     @Autowired
     private EmployeeService employeeService;
 
+    @Autowired
+    private ContactService contactService;
+
 
 
     @Override
@@ -177,6 +180,30 @@ public class SeedData implements ApplicationListener<ContextRefreshedEvent> {
 
 
 
+
+
+    }
+
+    private void generateContactAndAddress() {
+        Contact contactAaron = new Contact("Aaron", "Theile", "Solar City", "612-555-9999");
+
+        List<Address> addressListAaron = new ArrayList<Address>();
+        addressListAaron.add(new Address("5555 Main St.", 55555 , "CA", "Home"));
+        addressListAaron.add(new Address("5555 Parkdale Dr.", 66666, "MN", "Business"));
+        addressListAaron.add(new Address("1247 1st Ave", 66666, "MN", "PO box"));
+
+        contactAaron.setAddresses(addressListAaron);
+        contactService.saveContact(contactAaron);
+
+
+        Contact contactTom = new Contact("Tom", "B-Bow", "Hello Moon", "612-555-9999");
+
+        List<Address> addressListTom = new ArrayList<>();
+        addressListTom.add(new Address("5555 Virginia Cr.", 55555 , "CA", "Business"));
+
+
+        contactTom.setAddresses(addressListTom);
+        contactService.saveContact(contactTom);
 
 
     }
