@@ -32,6 +32,14 @@ public class Contact {
     public Contact() {
 
     }
+
+    public Contact(String firstName, String lastName, String company, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.company = company;
+        this.phoneNumber = phoneNumber;
+    }
+
     //endregion
 
     //region GETTERS AND SETTERS
