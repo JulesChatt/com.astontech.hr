@@ -102,8 +102,6 @@ function editEmployee(id) {
 }
 
 
-
-
 function deleteModal() {
     $('#confirmDeleteModal').on('click', '.btn-ok', function(e)  {
         var $modalDiv = $(e.delegateTarget);
